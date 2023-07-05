@@ -13,6 +13,6 @@ docker run --rm \
 -e NAME=$1 \
 -e MODEL_NAME=$2 \
 -e URL=$3 \
--e INDEX=$4 \
+-e INDEX=$4 \crop
 -e AUTO_SLICING=$5 \
 hulefei/cutting:latest

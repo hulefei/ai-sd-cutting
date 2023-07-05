@@ -16,7 +16,7 @@ class DreamboothCuttingTool:
         self.auto_slicing = auto_slicing
         self.path = f"session/{name}/dataset/{model_name}"
 
-    def corp(self):
+    def cut(self):
         if os.path.exists(self.path) and self.start_index == 0:
             shutil.rmtree(self.path)
 
@@ -100,6 +100,6 @@ if __name__ == '__main__':
     print(f"s_index: {s_index}")
     print(f"b_slicing: {b_slicing}")
 
-    corp_tool = DreamboothCuttingTool(img_url, local_name, local_model_name, s_index, b_slicing)
-    corp_tool.corp()
-    corp_tool.write_config()
+    crop_tool = DreamboothCuttingTool(img_url, local_name, local_model_name, s_index, b_slicing)
+    crop_tool.cut()
+    crop_tool.write_config()
